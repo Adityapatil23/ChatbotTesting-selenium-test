@@ -1,0 +1,29 @@
+browser:
+  name: chrome
+  headless: false
+  implicit_wait: 10
+  explicit_wait: 20
+
+urls:
+  base_url: https://app.vwo.com
+  login_url: https://app.vwo.com/#/login
+
+database:
+  host: localhost
+  port: 3306
+  database: test_db
+  user: root
+  password: root
+
+test_data:
+  valid_user:
+    email: "test@example.com"
+    password: "Test@123"
+  invalid_user:
+    email: "invalid@example.com"
+    password: "Invalid@123"
+
+screenshots:
+  path: "reports/screenshots"
+  on_failure: true
+  on_success: false
